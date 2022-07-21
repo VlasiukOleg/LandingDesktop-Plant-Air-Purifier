@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --container-width: 1240px;
+    --container-padding: 15px;
+    --secondary: rgba(15, 31, 28, 0.5);
+}
+
+/* Обнулюють стандартні стилі */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    line-height: 1;
+    font-family: Poppins, sans-serif;
+    background-color: #f6f6f6;
+    color: #0f1f1c;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.container-right {
+    padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+
+.block {
+    height: 200px;
+    background-color: #428e5f;
+}
+
+/* -------------------------------------------------Header----------------------------------------------- */
+
+.header {
+    /* Чтоб картинка не віходила за пределі */
+    overflow: hidden;
+    
+    position: relative;
+    min-height: 940px;
+    background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434;
+    color: #FFFFFF;
+
+    padding-top: 44px;
+}
+
+.header a {
+    color: #FFFFFF;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 96px;
+    left: 0;
+    bottom: 0;
+
+    background-image: url(../img/header/Bottom-object.svg);
+    background-size: 100%;
+}
+
+.header__top {
+    margin-bottom: 86px;
+}
+
+.header__row {
+    display: flex;
+
+}
+
+.header__img {
+    position: relative;
+    flex-grow: 1;
+}
+
+.header__img  img {
+    position: absolute;
+    top: -58px;
+    right: 58px;
+
+    
+}
+
+
+
+.header__content {
+    
+}
+
+/* ----Nav----- */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+    align-items: center;
+}
+.nav__logo {
+    
+}
+.block {
+}
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.46;
+    color: #FFFFFF;
+}
+
+.nav__list a {
+    position: relative;
+}
+
+.nav__list a.active::after, 
+.nav__list a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: -6px;
+
+    display: block;
+    /* width: 35px; */
+    height: 4px;
+
+    background: #C4C4C4;
+    border-radius: 100px;
+}
+
+.nav__phone {
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+.nav__login {
+    display: flex;
+    column-gap: 25px;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.46;
+
+    align-items: center;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 13px 34px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: rgb(211, 206, 206);
+    transition: color 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 2px;
+}
+
+/* ----------HeaderContent------- */
+
+
+.header__content {
+    max-width: 592px;
+
+    /* Чтоб картинка под текстом біла */
+    position: relative;
+    z-index: 1;
+}
+
+.header__badge {
+    margin-bottom: 7px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 11px 30px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+}
+
+.header__title {
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 1.5;
+}
+
+.header__text {
+    margin-bottom: 68px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.52;
+    opacity: 0.5;
+}
+
+.header__btn {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.52;
+    padding: 26px 60px;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    border-radius: 27px;
+}
+
+.header__btn:hover {
+    color: rgb(211, 206, 206);
+    transition: color 0.2s ease-in;
+}
+
+.header__btn:active {
+    position: relative;
+    top: 2px;
+}
+
+
+/* -------------------------Destinations---------------------- */
+
+.destinations {
+    padding: 96px 0px 100px;
+    overflow-x: hidden;
+}
+
+.destinations a {
+    color: #FFFFFF;
+}
+.container-right {
+}
+.destinations__row {
+    display: flex;
+    column-gap: 50px;
+}
+.destinations__content {
+    max-width: 456px;
+}
+
+.destinations__slider {
+    width: 1110px;
+
+    /* чтоб не уменьшался слайдер */
+    flex-shrink: 0;
+}
+
+
+.destinations__content {
+}
+.destinations__title {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+.destinations__title span {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+
+
+}
+
+.destinations__text {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.52;
+    color: var(--secondary);
+
+    margin-bottom: 60px;
+}
+
+
+.destinations__btn {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+
+    padding: 24px 44px;
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    border-radius: 27px;
+}
+
+.destinations__btn:hover {
+    color: rgb(211, 206, 206);
+    transition: color 0.2s ease-in;
+}
+
+.destinations__btn:active {
+    position: relative;
+    top: 2px;
+}
